@@ -1,6 +1,6 @@
 /* Genegal styles */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 html {
   box-sizing: border-box;
 }
@@ -17,6 +17,89 @@ body {
   margin: 0 auto;
   padding: 0 250px;
 }
+
+/* Header block */
+.header {
+    background-image: url(../img/bg.jpg);
+    text-align: center;
+    width: 1440px;
+    max-height: 769px;
+    margin: 0 auto 20px;
+}
+.header_logo {
+    padding-top: 40px;
+    padding-bottom: 258px;
+}
+.header_h1 {
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 5.71px;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-bottom: -5px;
+}
+.header_p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 225px;
+    margin-top: 0;
+}
+.header_h5 {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 5.71px;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 51px;
+    margin: 0 auto;
+}
+
+
+/* Navbar block */
+.navbar {
+}
+.navbar:after {
+    content: '';
+    width: 1442px;
+    height: 1px;
+    background-color: #E6E6E6;
+    display: block;
+    margin: 0 auto -27px;
+}
+.navbar_flex {
+    display: flex;
+    justify-content: space-between;
+}
+.navbar_img {
+}
+.navbar_navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    list-style: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #48555B;
+    font-size: 12px;
+}
+.item_navbar_li {
+    margin-right: 48px;
+}
+.item_navbar_li:nth-child(5){
+    margin-right: 0;
+}
+.item_navbar_li:hover {
+    color: #00A4E5;
+}
+/* .sidenav-trigger {
+} */
+
 
 
 /* "Our story" block */
@@ -39,7 +122,8 @@ body {
     height: 2px;
     background-color: #00A4E5;
     display: block;
-    margin: 10px auto 0;
+    margin: 10px auto;
+    margin-bottom: -11px;
 }
 
 .story_inner{
@@ -54,6 +138,7 @@ body {
     color: #48555B;
     font-weight: bold;
     font-size: 20px;
+    margin-bottom: 31px;
 }
 .accent_color {
     color: #00A4E5;
@@ -113,3 +198,5 @@ body {
         margin-bottom: 0;
     }
 }
+
+/* Our Capabilities block */
