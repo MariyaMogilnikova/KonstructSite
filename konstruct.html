@@ -29,10 +29,29 @@
                     <li class="navbar-list__li"><a href="#work"></a>Work</li>
                     <li class="navbar-list__li"><a href="#contract"></a>Contract</li>
                 </ul> 
-                <!-- <a href="" class="sidenav-trigger"></a> -->
+                <!-- Burger icon -->
+                <div class="burger navbar-burger">
+                    <span></span>
+                </div>
             </div>
         </div>
     </section>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar__flex">
+                <img src="img/projeco-logo-black.svg" alt="Logo" class="navbar-img">
+                <button class="sidebar-burger">&times;</button>
+            </div>
+            <ul class="sidebar__items">
+                <li><a href="#"></a>Home</li>
+                <li><a href="#"></a>About</li>
+                <li><a href="#"></a>Services</li>
+                <li><a href="#"></a>Work</li>
+                <li><a href="#"></a>Contract</li>
+            </ul>
+        </div>
+    </div>
 
     <section class="story">
         <div class="container">
@@ -58,7 +77,7 @@
                     <h3 class="services-h3 services-h3_line">OUR CAPABILITIES</h3>
                 </div>
                 <div class="services-flex__item">
-                    <p class="services-p services-p__up">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam<br> nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
+                    <p class="services-p services-p__up">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
                     <button class="button">ALL SERVISES</button>
                 </div>                   
             </div>
@@ -104,39 +123,47 @@
     <section class="info">
         <div class="container">
             <div class="info__flex">
-                <div class="info-flex__items">
-                    <p class="info-p" >COMPANY</p>
-                    <img src="/img/projeco-logo.svg" alt="Logo" class="navbar-img">
-                    <p class="info-p" >Lorem ipsum dolor sit amet, consectetuer<br> adipiscing elit, sed diam nonummy nibh<br> euismod tincidunt ut laoreet dolore<br> magna aliquam erat.</p>
+                <div class="info-first">
+                    <div class="info-flex__items">
+                        <p class="info-p" >COMPANY</p>
+                        <img src="img/projeco-logo.svg" alt="Logo" class="navbar-img">
+                        <p class="info-p" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
+                    </div>
                 </div>
-                <div class="info-flex__items">
-                    <p class="info-p" >LINKS</p>
-                    <p class="info-p" >HOME</p>
-                    <p class="info-p" >ABOUT</p>
-                    <p class="info-p" >SERVICES</p>
-                    <p class="info-p" >PROJECTS</p>
-                    <p class="info-p" >CONTACT US</p>
+                <div class="info-second">
+                    <div class="info-flex__items">
+                        <p class="info-p" >LINKS</p>
+                        <p class="info-p" >HOME</p>
+                        <p class="info-p" >ABOUT</p>
+                        <p class="info-p" >SERVICES</p>
+                        <p class="info-p" >PROJECTS</p>
+                        <p class="info-p" >CONTACT US</p>
+                    </div>
+                    <div class="info-flex__items">
+                        <p class="info-p" >FAQ</p>
+                        <p class="info-p" >TERMS</p>
+                        <p class="info-p" >CAREERS</p>
+                    </div>
+                    <div class="info-flex__items">
+                        <p class="info-p" >BLOG</p>
+                        <p class="info-p" >PARTNERS</p>
+                        <p class="info-p" >NEWS</p>
+                    </div>
                 </div>
-                <div class="info-flex__items">
-                    <p class="info-p" >FAQ</p>
-                    <p class="info-p" >TERMS</p>
-                    <p class="info-p" >CAREERS</p>
-                </div>
-                <div class="info-flex__items">
-                    <p class="info-p" >BLOG</p>
-                    <p class="info-p" >PARTNERS</p>
-                    <p class="info-p" >NEWS</p>
-                </div>
-                <div class="info-flex__items">
-                    <p class="info-p" >CONTACT US</p>
-                    <p class="info-p" >213 Baker Street<br> Oriel City Kounty<br> 7000 KNW,<br> Kountry Name</p>
-                    <p class="info-p" >+23 994 233 4022</p>
-                    <p class="info-p" >info@konstruct.com</p>
-                </div>
-                <div class="info-flex__icons">
-                        <img class="info-img" src="/img/facebook.svg" alt="Icon-Facebook">
-                        <img class="info-img" src="/img/twitter.svg" alt="Icon-Twitter">
-                        <img class="info-img" src="/img/google.svg" alt="Icon-Google">
+                <div class="info-third">    
+                    <div class="info-flex__items">
+                        <p class="info-p" >CONTACT US</p>
+                        <p class="info-p" >213 Baker Street Oriel City Kounty 7000 KNW, Kountry Name</p>
+                        <p class="info-p" >+23 994 233 4022</p>
+                        <p class="info-p" >info@konstruct.com</p>
+                    </div>
+                </div>    
+                <div class="info-fourth">
+                    <div class="info-flex__icons">
+                            <img class="info-img" src="img/facebook.svg" alt="Icon-Facebook">
+                            <img class="info-img" src="img/twitter.svg" alt="Icon-Twitter">
+                            <img class="info-img" src="img/google.svg" alt="Icon-Google">
+                    </div>
                 </div>
             </div>
         </div>
@@ -148,7 +175,18 @@
         </div> 
     </section>
 
-    <script></script>
+    <script>
+        document.querySelector('.navbar-burger').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.querySelector('.sidebar').classList.toggle('open');
+        });
+
+        // Обработчик для сайдбара
+        document.querySelector('.sidebar-burger').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.querySelector('.sidebar').classList.toggle('open');
+        });
+    </script>
     
 </body>
 </html>
